@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+        <!-- Link to your main CSS file -->
+        <head>
+          <!-- ... other meta tags and stylesheets ... -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <link rel="stylesheet" href="styles/HOMEPAGE.css">
+
+        </head>
+        
+        <link rel="stylesheet" href="HOMEPAGE.CSS">
+    </head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container-academic-achievement">
+        <h1>Academic Achievements</h1>
+
+        <div class="achievement-images">
+
+            <div class="achievement-image">
+                <img src="MEDIA/IMAGES/academic achievements graduation 2.jpg" alt="Achievement Image 2">
+            </div>
+         
+        </div>
+
+        <hr>
+
+        <p class="achievement-description">
+            Our students' outstanding performance, characterized by their exceptional scores and rankings, underscores the exceptional quality of education we offer at Triza Junior School. This achievement is not only a reflection of our students' academic prowess but also a tribute to the nurturing and conducive learning environment we provide. </p>
+<p class="achievement-description">
+            This accomplishment aligns seamlessly with our core mission of empowering young minds with knowledge, fostering critical thinking, and instilling a lifelong passion for learning. It also highlights the collaborative efforts of our committed teaching staff, supportive parents, and our motivated students.
+         </p>   <p class="achievement-description">
+            As we celebrate this remarkable milestone, we reiterate our commitment to continually uphold our standards of excellence, ensuring that every student at Triza Junior School is provided with the opportunity to excel and reach their full potential. This achievement serves as a source of inspiration for us to continue fostering a culture of academic achievement, personal growth, and holistic development.
+        </p>
+       
+        <!-- Add more content here -->
+
+    </div>
+    <div id="footer"></div>
+
+    <!-- JavaScript code to dynamically load the header and footer -->
+    <script>
+      // Function to fetch and load the header and footer content
+      function loadHeaderAndFooter() {
+        const headerDiv = document.getElementById('header');
+        const footerDiv = document.getElementById('footer');
+    
+        // Fetch the header content
+        fetch('HEADER.HTML')
+          .then(response => response.text())
+          .then(data => {
+            headerDiv.innerHTML = data;
+          });
+    
+        // Fetch the footer content
+        fetch('FOOTER.HTML')
+          .then(response => response.text())
+          .then(data => {
+            footerDiv.innerHTML = data;
+          });
+      }
+    
+      // Call the function to load the header and footer when the page is ready
+      document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.css">
+
+    </head>
+    
+    <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-uniform">
+        <h1>Uniform Information</h1>
+
+        <div class="info-card">
+            <div class="info-details">
+                <div class="info-title">School Uniform Guidelines</div>
+                <div class="info-description">
+                    <p>At Triza Junior School, we believe in creating a sense of unity and pride among our students. Our school uniform plays a vital role in achieving this goal. <br>
+                         We have established clear guidelines for our school uniform to ensure that all students are dressed appropriately and maintain a consistent appearance.</p>
+                    <p>The school uniform includes details such as the type of clothing, colors, and any specific requirements. We encourage parents and guardians to familiarize themselves with these guidelines to ensure that their children are dressed in accordance with our school's standards.</p>
+                    <p>We believe that a well-maintained uniform promotes a positive and respectful learning environment. It also instills a sense of discipline and responsibility in our students.</p>
+                    <p>If you have any questions or need further clarification regarding our uniform guidelines, please feel free to <a href="CONTACT-US.HTML">contact</a> us.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <h1>FAQs</h1>
+            <button class="collapsible">What is the school uniform policy?</button>
+            <div class="content-uniform">
+                <p>Our school   <a href="MEDIA/DOCUMENTS/school uniform policy.pdf">uniform policy</a>
+                    outlines the types of clothing, colors, and guidelines for wearing the school uniform. It is specifically designed to create a sense of unity and discipline among our students.</p>
+            </div>
+            <button class="collapsible">Where can I purchase the school uniform?</button>
+            <div class="content-uniform">
+                <p>You can purchase the school uniform at our designated school store that is within the school premises.</p>
+            </div>
+            <button class="collapsible">Can I personalize or modify the school uniform?</button>
+            <div class="content-uniform">
+                <p>To maintain uniformity and adherence to the school's guidelines, we request that the uniform remains unaltered. However, minor alterations for fitting purposes are acceptable.</p>
+            </div>
+            <button class="collapsible">How do i pay for the school uniform?</button>
+            <div class="content-uniform">
+                <p>Payment is made at the school and the receipt issued
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var content = document.getElementsByClassName("content-uniform");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                var idx = Array.from(coll).indexOf(this);
+                for (var j = 0; j < content.length; j++) {
+                    if (j === idx) {
+                        content[j].style.maxHeight = content[j].style.maxHeight ? null : content[j].scrollHeight + "px";
+                    } else {
+                        content[j].style.maxHeight = null;
+                    }
+                }
+            });
+        }
+    </script>
+     <div id="footer"></div>
+
+     <!-- JavaScript code to dynamically load the header and footer -->
+     <script>
+        // Function to fetch and load the header and footer content
+        function loadHeaderAndFooter() {
+          const headerDiv = document.getElementById('header');
+          const footerDiv = document.getElementById('footer');
+      
+          // Fetch the header content
+          fetch('HEADER.HTML')
+            .then(response => response.text())
+            .then(data => {
+              headerDiv.innerHTML = data;
+            });
+      
+          // Fetch the footer content
+          fetch('FOOTER.HTML')
+            .then(response => response.text())
+            .then(data => {
+              footerDiv.innerHTML = data;
+            });
+        }
+      
+        // Call the function to load the header and footer when the page is ready
+        document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+      </script>
+
+<script>
+    function openPDF(pdfLink) {
+      window.open(pdfLink, '_blank');
+    }
+  </script>
+      
+</body>
+</html>

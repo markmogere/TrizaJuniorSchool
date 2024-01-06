@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="styles/HOMEPAGE.css">
+
+    </head>
+    
+    <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-join-us">
+        <h6 style="width: 90%; color: rgb(4, 31, 14); line-height: 2.5;font-size: 12px;">Welcome! <br> We're excited to invite passionate individuals to join our vibrant school community. Whether you're an inspiring educator, an administrative pro, or someone with a knack for supporting students behind the scenes, we welcome your unique talents and dedication. Even if we're not actively hiring at the moment, we'd love to consider your application for future opportunities that align with your skills and aspirations. <br> Come be a part of our team, where every role contributes to shaping bright futures!</h6>
+        <h3>APPLICATION FORM</h3>
+        <form>
+            <div class="form-group-join-us">
+                <label for="fullName">FULL NAME</label>
+                <input type="text" id="fullName" name="fullName" required, placeholder="Fullname">
+            </div>
+            <div class="form-group-join-us">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required, placeholder="Email">
+            </div>
+            <div class="form-group-join-us">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phoneInput" placeholder="Phone Number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required>
+            </div>
+            <div class="form-group-join-us">
+                <label for="resume">RESUME/CV</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group-join-us">
+                <label for="position">SPECIALISATION</label>
+                <select id="position" name="position" required>
+                    <option value="" disabled selected>Select your area of specialisation</option>
+                    <option value="developer">Principal</option>
+                    <option value="designer">Deputy Principal</option>
+                    <option value="manager">Teacher</option>
+                    <option value="manager">Assistant Teacher</option>
+                    <option value="manager">Janitor</option>
+                    <option value="manager">Librarian</option>
+                    <option value="manager">Secretary</option>
+                    <option value="manager">Maintenance</option>
+                    <option value="manager">Security</option>
+                    <option value="manager">Sports Coach</option>
+                    <option value="manager">School Nurse</option>
+                    <option value="manager">IT Support</option>
+                    <option value="manager">School Counselor</option>
+                    <option value="manager">Human Resource</option>
+                    <option value="manager">Cook</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="form-group-join-us">
+                <label for="message">COVER LETTER</label>
+                <textarea id="message" name="message" required placeholder="Type your cover letter here. Maximum (200 Words)"></textarea>
+            </div>
+            <button type="submit" id="submitButton" disabled>SUBMIT</button>
+        </form>
+
+        <!-- Confirmation message container -->
+        <div id="confirmationMessage" style="display: none; text-align: center;">
+            <h4>Submitted successfully!</h4>
+            <p>We will review your information and get back to you soon.</p>
+            <button class="ok-button-join-us" id="okButton">BACK TO HOMEPAGE</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const okButton = document.getElementById('okButton');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            // Display the confirmation message and hide the form
+            form.style.display = 'none';
+            confirmationMessage.style.display = 'block';
+        });
+
+        okButton.addEventListener('click', function () {
+            // Hide the confirmation message and show the form again
+            confirmationMessage.style.display = 'none';
+            form.style.display = 'block';
+
+            // Redirect to the main page (change "mainpage.html" to your actual main page URL)
+            window.location.href = 'HOMEPAGE.HTML';
+        });
+
+        const fullNameInput = document.getElementById("fullName");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phoneInput");
+        const resumeInput = document.getElementById("resume");
+        const positionInput = document.getElementById("position");
+        const messageInput = document.getElementById("message");
+        const submitButton = document.getElementById("submitButton");
+
+        [fullNameInput, emailInput, phoneInput, resumeInput, positionInput, messageInput].forEach(input => {
+            input.addEventListener("input", () => {
+                if (
+                    fullNameInput.value &&
+                    emailInput.value &&
+                    phoneInput.value.length === 10 &&
+                    resumeInput.value &&
+                    positionInput.value &&
+                    messageInput.value
+                ) {
+                    submitButton.removeAttribute("disabled");
+                } else {
+                    submitButton.setAttribute("disabled", true);
+                }
+            });
+        });
+    </script>
+    <div id="footer"></div>
+
+    <!-- JavaScript code to dynamically load the header and footer -->
+    <script>
+        // Function to fetch and load the header and footer content
+        function loadHeaderAndFooter() {
+          const headerDiv = document.getElementById('header');
+          const footerDiv = document.getElementById('footer');
+      
+          // Fetch the header content
+          fetch('HEADER.HTML')
+            .then(response => response.text())
+            .then(data => {
+              headerDiv.innerHTML = data;
+            });
+      
+          // Fetch the footer content
+          fetch('FOOTER.HTML')
+            .then(response => response.text())
+            .then(data => {
+              footerDiv.innerHTML = data;
+            });
+        }
+      
+        // Call the function to load the header and footer when the page is ready
+        document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+      </script>
+      
+</body>
+</html>

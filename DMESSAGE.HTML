@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+  <!-- Link to your main CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="HOMEPAGE.css">
+</head>
+<body class="about-us-body">
+
+  <!-- This div will be used to display the header content -->
+  <div id="header"></div>
+  <div class="About-Us-Container">
+    <h1 class="main-heading">THE DIRECTOR'S MESSAGE</h1>
+   
+        <p class="about-us-description">
+            Welcome to Triza Junior School! As the proud director of this esteemed institution, it is my pleasure to extend a warm greeting to all our visitors, parents, and prospective learners. At Triza Junior School, we believe that education is not just about imparting knowledge; it's about shaping young minds, fostering creativity, and nurturing the leaders of tomorrow.
+        
+           </p> <p class="about-us-description"> Our mission at Triza Junior School is to provide a holistic and transformative educational experience that empowers our learners to thrive in an ever-changing world. We take pride in our commitment to academic excellence, character development, and the cultivation of essential life skills.
+        
+            Here at Triza Junior School, we have a dedicated team of educators who are passionate about teaching and dedicated to creating a supportive and inclusive learning environment. Our teachers strive to inspire curiosity, critical thinking, and a love for learning in every child.
+        
+          </p> <p class="about-us-description"> We believe in the power of collaboration and encourage active involvement from parents and the community in our learners' educational journey. Our open-door policy ensures that parents are always informed about their child's progress and are active participants in their growth and development.
+        
+            As a school, we value individuality and celebrate diversity. We recognize that each learner is unique, and we provide personalized attention to cater to their specific needs and interests.
+        
+          </p> <p class="about-us-description">  At Triza Junior School, we embrace modern teaching methodologies and leverage state-of-the-art facilities to provide an engaging and enriching learning experience. Our extracurricular activities and clubs offer a platform for learners to explore their passions and interests beyond the classroom.
+        
+            Our commitment to holistic development extends beyond academics. We instill in our learners a sense of social responsibility and empathy for others. We aim to cultivate well-rounded individuals who not only excel academically but also make a positive impact in their communities and the world.
+        
+           </p> <p class="about-us-description"> As you explore Triza Junior School, you will witness a vibrant and dynamic learning community where learners are encouraged to dream big and reach for the stars. We foster a culture of curiosity, resilience, and a growth mindset, empowering our learners to face challenges with confidence.
+        
+            I invite you to be a part of our Triza Junior School family, where we cherish the values of respect, integrity, excellence, innovation, and responsibility. Together, let's create a brighter future for our learners, preparing them to be compassionate global citizens and leaders of tomorrow.
+        
+            Thank you for considering Triza Junior School as the place where your child's educational journey begins. We are excited to embark on this transformative adventure with you!
+        <p class="about-us-description">
+            Sincerely, <br>
+            MARK MOGERE, <br>
+            Director, Triza Junior School </p>
+
+  </div>
+  <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>

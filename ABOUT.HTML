@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+  <!-- Link to your main CSS file -->
+  <head>
+    <!-- ... other meta tags and stylesheets ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/HOMEPAGE.css">
+
+  </head>
+  
+  <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body class="about-us-body">       
+  <!-- This div will be used to display the header content -->
+  <div id="header"></div>
+  <div class="about-us-container">
+    <div class="about-us-sub-container vision">
+      <h1>WELCOME</h1>
+      <p>We are set to give our students a memorable learning experience both in and out of the class by inspiring them to go beyond their imagination. We offer the local curriculum with the addition of other learning areas to enrich the children learning experience</p>
+      <h2>OUR VISION</h2>
+      <p>Triza Junior School envisions a transformative educational landscape where academic brilliance intertwines with holistic development. Our vision is to be a pioneering center of educational excellence, setting unprecedented benchmarks in nurturing future generations. We strive to instill a passion for lifelong learning, fostering an environment where curiosity thrives, creativity flourishes, and character is sculpted.
+
+        At the heart of our vision lies the aspiration to cultivate compassionate and responsible global citizens, empowered with the tools to navigate the complexities of a diverse world. We envision graduates who not only excel academically but also possess the empathy, resilience, and ethical fortitude to make meaningful contributions to society.</p>
+      <br>
+      <h2>OUR MISSION</h2>
+      <p>Triza Junior School aspires to pave a transformative path in education, fostering a dynamic learning environment that nurtures not just academic prowess but also the multifaceted growth of each student. Our mission is to cultivate a culture of lifelong curiosity, where innovative teaching methods and character development converge, empowering our learners to navigate the world with intellect, empathy, and unwavering integrity.
+
+        We are dedicated to shaping resilient individuals who, equipped with a global perspective and a sense of responsibility, embrace diversity, and champion positive change. Our commitment lies in fostering a community where every student thrives academically, emotionally, and ethically, poised to lead and contribute meaningfully to a diverse and evolving society.</p>
+
+    </div>
+    <div class="about-us-sub-container objectives">
+      <h2>OBJECTIVES</h2>
+      <p><strong>1. Academic Excellence</strong><br>
+        Strive for academic rigor by employing innovative teaching methodologies, personalized learning, and continuous curriculum enhancement to ensure students achieve their highest potential. <br>
+        <strong>2. Holistic Development</strong><br>
+        Foster a nurturing environment that promotes holistic growth, encompassing emotional, social, and physical well-being alongside academic achievements. <br>
+        <strong>3. Global Citizenship</strong><br>
+        Instill values of empathy, responsibility, and cultural awareness, preparing students to actively contribute as compassionate global citizens. <br>
+        <strong>4. Innovation and Technology</strong><br>
+        Embrace technological advancements and innovation, integrating them into the educational process to enhance learning outcomes and future-readiness. <br>
+        <strong>5. Community Engagement</strong><br>
+        Encourage active participation and collaboration among students, parents, educators, and the wider community, fostering a sense of belonging and shared responsibility in education. <br>
+        <strong>6. Character Building</strong><br>
+        Focus on character development, emphasizing integrity, resilience, leadership, and critical thinking skills essential for success in a dynamic world. <br>
+       <strong> 7. Diversity and Inclusion</strong> <br>
+       Create an inclusive environment that celebrates diversity, respects individual differences, and promotes mutual understanding and respect among all members of the school community.
+      </p>
+    </div>
+  </div>
+  
+  
+  <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>
