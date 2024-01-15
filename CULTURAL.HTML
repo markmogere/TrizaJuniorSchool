@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="styles/HOMEPAGE.css">
+
+    </head>
+    
+    <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-cultural">
+        <h1>Annual Cultural Festival</h1>
+
+        <div class="event-card">
+            <div class="event-image">
+                <img src="MEDIA/IMAGES/culture1.jpg" alt="Cultural Event">
+            </div>
+            <div class="event-details">
+                <div class="event-description">
+                    <p>Triza Junior School's Annual Cultural Festival is a vibrant celebration of our diverse cultural heritage. Each year, our students come together to showcase their talent, creativity, and passion for the arts.</p>
+                    <p>The festival features a mesmerizing array of traditional dances, musical performances, art exhibitions, and much more. Students from different backgrounds collaborate to create a dynamic and harmonious display of culture and unity.</p>
+                    <p>Parents, guardians, and members of the community are invited to join us for this joyous occasion. Through music, dance, and art, our students embrace the values of respect, understanding, and harmony that enrich our school's ethos.</p>
+                    <p>As we celebrate our shared cultural heritage, we also encourage our students to explore and appreciate the rich traditions that make up our global family.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <img src="MEDIA/IMAGES/culture.jpg" alt="Cultural Event">
+            <img src="MEDIA/IMAGES/culture3.jpg" alt="Cultural Event">
+            <!-- Add more images here -->
+        </div>
+    </div>
+    <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container-facilities">
+        <h1>Facilities</h1>
+
+        <!-- Facility 1 -->
+        <div class="facility-card">
+            <img class="facility-image" src="MEDIA/IMAGES/LIBRARY.jpg" alt="Facility 1">
+            <div class="facility-details">
+                <div class="facility-title">Spacious library with a wide range of books to support learning and research</div>
+            </div>
+        </div>
+
+        <!-- Facility 2 -->
+        <div class="facility-card">
+            <img class="facility-image" src="MEDIA/IMAGES/science (3).jpg" alt="Facility 2">
+            <div class="facility-details">
+                <div class="facility-title">Our well-equipped Science Labs that provide students with hands-on experiences in various scientific disciplines and designed to facilitate practical learning and experimentation.</div>
+            </div>
+        </div>
+
+        <!-- Facility 3 -->
+        <div class="facility-card">
+            <img class="facility-image" src="MEDIA/IMAGES/sports (4).jpg" alt="Facility 3">
+            <div class="facility-details">
+                <div class="facility-title">Spacius Sports Fields that promote a healthy and active lifestyle. </div>
+            </div>
+        </div>
+        <div class="facility-card">
+          <img class="facility-image" src="MEDIA/IMAGES/comp lab (6).jpg" alt="Facility 3">
+          <div class="facility-details">
+              <div class="facility-title">Cutting-edge Computer Labs fostering innovation and digital exploration.</div>
+          </div>
+      </div>
+      <div class="facility-card">
+        <img class="facility-image" src="MEDIA/IMAGES/classes (3).jpg" alt="Facility 3">
+        <div class="facility-details">
+            <div class="facility-title">Dynamic classrooms designed to inspire curiosity and ignite learning journeys.</div>
+        </div>
+    </div>
+
+    </div>
+    <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+  
+</body>
+</html>

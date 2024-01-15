@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.css">
+
+    </head>
+    
+    <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container-theme-of-the-week">
+<h1 class="theme-of-the-week">THEME OF THE WEEK</h1>
+<h1 class="theme-theme">Determination</h1>
+        <!-- Team of the Week Section -->
+        <div class="info-card team-section">
+            <div class="team-title">2024 Term One Teacher on Duty and Theme</div>
+            <table class="team-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Teacher on Duty</th>
+                        <th>Theme of the Week</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jan 8th - Jan 13th</td>
+                        <td>Mr. Majiwa</td>
+                        <td>Teamwork</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Jan 14th - Jan 20th</td>
+                      <td>Mr. Curtis</td>
+                      <td>Honesty</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Jan 21st - Jan 27th</td>
+                    <td>Md. Rechael</td>
+                    <td>Love</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Jan 27th - Feb 2nd</td>
+                  <td>Md. Beatrice</td>
+                  <td>Empathy</td>
+              </tr>
+
+                    
+                    <!-- Add more weeks, team leaders, teachers, and themes as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <!-- JavaScript code to dynamically load the header and footer -->
+    <script>
+      // Function to fetch and load the header and footer content
+      function loadHeaderAndFooter() {
+        const headerDiv = document.getElementById('header');
+        const footerDiv = document.getElementById('footer');
+    
+        // Fetch the header content
+        fetch('HEADER.HTML')
+          .then(response => response.text())
+          .then(data => {
+            headerDiv.innerHTML = data;
+          });
+    
+        // Fetch the footer content
+        fetch('FOOTER.HTML')
+          .then(response => response.text())
+          .then(data => {
+            footerDiv.innerHTML = data;
+          });
+      }
+    
+      // Call the function to load the header and footer when the page is ready
+      document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+    </script>
+    
+</body>
+</html>

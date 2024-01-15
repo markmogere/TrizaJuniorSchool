@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.css">
+
+    </head>
+    
+    <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-sports">
+        <h1>Sports</h1>
+
+        <!-- Sport Card 1 -->
+        <div class="sport-card">
+            <img class="sport-image" src="MEDIA/IMAGES/sports (10).jpg" alt="Sport 1">
+            <div class="sport-details">
+                <div class="sport-title">Football</div>
+                <div class="sport-description">
+                  Our Football program is where dribbling skills, goal-scoring magic, and team strategy collide on the pitch! With top-tier coaching and exhilarating drills, students hone their footwork, passing precision, and tactical game sense. <br>
+                   Our program isn't just about scoring goals; it's a pitch-perfect adventure where students embrace the thrill of the game, foster teamwork, and build sportsmanship that echoes beyond the field
+                </div>
+            </div>
+        </div>
+
+        <!-- Sport Card 2 -->
+        <div class="sport-card">
+            <img class="sport-image" src="MEDIA/IMAGES/BASKETBALL.jpg" alt="Sport 2">
+            <div class="sport-details">
+                <div class="sport-title">Basketball</div>
+                <div class="sport-description">
+                  Basketball program is where dribbling, shooting hoops, and slam dunks meet teamwork, adrenaline, and sheer excitement! With top-notch coaching and high-energy drills, students learn the art of ball handling, three-pointers, and defensive strategies. <br>
+                  Our program isn't just about perfecting layups; it's a slam-tastic journey where students embrace the fast-paced action, develop leadership skills, and foster a competitive spirit that echoes both on the court and in their everyday lives. So, get ready to hoop it up, have a blast, and score big with our electrifying Basketball program!
+                </div>
+            </div>
+        </div>
+        <div class="sport-card">
+          <img class="sport-image" src="MEDIA/IMAGES/sports (11).jpg" alt="Sport 2">
+          <div class="sport-details">
+              <div class="sport-title">Volleyball</div>
+              <div class="sport-description">
+                The program isn't just about serving and spiking; it's a platform that cultivates teamwork, communication, and strategic thinking among students. Through expert coaching and team-oriented training, students learn the fundamentals of Volleyball, emphasizing skills such as serving, setting, and blocking. <br> Our program fosters not only athletic abilities but also camaraderie, leadership, and resilience, creating a supportive environment where students grow both as athletes and individuals, fostering a lifelong love for the sport and essential life values.
+              </div>
+          </div>
+      </div>
+      <div class="sport-card">
+        <img class="sport-image" src="MEDIA/IMAGES/sport training2.jpg" alt="Sport 2">
+        <div class="sport-details">
+            <div class="sport-title">Netball</div>
+            <div class="sport-description">
+              Our Netball program is where precision passes, strategic moves, and high-flying teamwork take center stage! Through expert coaching and skill-building sessions, students master the art of passing, shooting, and defensive tactics on the court. <br>
+               Our program isn't just about scoring goals; it's a whirlwind of fast-paced action, where students learn resilience, communication, and tactical thinking, creating a dynamic environment where every player shines as a vital part of the team.
+            </div>
+        </div>
+    </div>
+    <div class="sport-card">
+      <img class="sport-image" src="MEDIA/IMAGES/sports (13).jpg" alt="Sport 2">
+      <div class="sport-details">
+          <div class="sport-title">Athletics</div>
+          <div class="sport-description">
+            Athletics program encompasses a wide range of sports, including track events, field events like javelin, and various disciplines that foster resilience, speed, and agility. <br>
+            Through specialized coaching and diverse training, students not only excel in sprinting, jumping, and throwing but also learn the value of perseverance, teamwork, and sportsmanship. Our Athletics program isn't solely about individual achievements; it's a platform where students develop a strong work ethic, goal-setting skills, and a passion for healthy competition, shaping them into well-rounded athletes equipped for success both on and off the track.
+          </div>
+      </div>
+  </div>
+  <div class="sport-card">
+    <img class="sport-image" src="MEDIA/IMAGES/sports (5).jpg" alt="Sport 2">
+    <div class="sport-details">
+        <div class="sport-title">Gymnastics</div>
+        <div class="sport-description">
+          At Triza Junior School, our Gymnastics program isn't just about flips and routines; it's a platform that nurtures flexibility, strength, and determination in students. With specialized coaching and tailored sessions, students learn the fundamentals of Gymnastics, emphasizing grace, precision, and perseverance. <br>
+           Our program instills not only physical prowess but also confidence, focus, and the ability to set and achieve goals, creating well-rounded individuals who excel not just on the mat, but in various aspects of their lives.
+        </div>
+    </div>
+</div>
+<div class="sport-card">
+  <img class="sport-image" src="MEDIA/IMAGES/sports (15).jpg" alt="Sport 2">
+  <div class="sport-details">
+      <div class="sport-title">Karate</div>
+      <div class="sport-description">
+        At Triza Junior School, teaching students Karate goes beyond physical training; it instills discipline, self-control, and confidence. Through expert guidance and tailored lessons, students learn the fundamentals of Karate, focusing on technique, respect, and mental resilience. <br>
+        Our Karate program emphasizes character development alongside physical skill, fostering a balanced approach where students grow not just as martial artists, but as individuals equipped with essential life values and a strong sense of self.
+      </div>
+  </div>
+</div>
+
+        <!-- Add more Sport Cards as needed -->
+
+    </div>
+    
+  <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>

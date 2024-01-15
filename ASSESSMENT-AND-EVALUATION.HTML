@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-assessment">
+        <h1>Assessment & Evaluation</h1>
+
+        <!-- Assessment & Evaluation Section -->
+        <div class="assessment-section">
+            <div class="assessment-title">Comprehensive Assessments</div>
+            <div class="assessment-description">
+                <p>We believe in continuous assessment to monitor students' progress and provide targeted support.</p>
+                <p>Our comprehensive assessment system includes regular tests, quizzes, and projects to evaluate student learning.</p>
+                <p>For more details, check our assessment calendar:</p>
+            </div>
+            <!-- Table-like design for Assessment Calendar -->
+            <table class="assessment-calendar">
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>February 6th, Thursday</td>
+                    <td>Mid-term Three  Exams</td>
+                </tr>
+                <tr>
+                    <td>April 15th, Monday</td>
+                    <td>End-Term Three Exams</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+            <!-- End of Assessment Calendar -->
+
+            <!-- Links -->
+        </div>
+
+        <div class="assessment-section">
+            <div class="assessment-title">Assessment Strategies</div>
+            <div class="assessment-description">
+                <p>We employ various strategies to ensure effective assessments and student learning.</p>
+                <p>Our teachers use a combination of quizzes, projects, and class participation to assess students' knowledge.</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>

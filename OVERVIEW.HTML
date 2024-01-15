@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+  <!-- Link to your main CSS file -->
+  <head>
+    <!-- ... other meta tags and stylesheets ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="HOMEPAGE.css">
+
+  </head>
+  
+  <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+  <div id="header"></div>
+  <main class="main-admission">
+    <h1>Admission Overview Guide</h1>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 1: Registration</h3>
+        <p>Visit the school to fill out an application form.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 2: Assessment</h3>
+        <p>The admissions department will schedule an assessment in English and Mathematics in additional to understanding your child's unique needs. <strong>Assessment fee</strong> per child is Ksh 500. </p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 3: Information Capture</h3>
+        <p>After a successful assessment, an admission form is filled out offering the student a placement in the school.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 4: Acceptance Fee</h3>
+        <p>An <strong>ACCEPTANCE FEE</strong> and <strong>CAUTION MONEY</strong> of Ksh 3,000 and Ksh 500 respectively is paid by the parent to secure a place for their child. The ACCEPTANCE FEE  will be forwarded as an initial school fee deposit.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 5: School Fee Deposit</h3>
+        <p>Full school fees and caution fee paid in before ennrollment.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <h3>Step 5: Enjoy Learning</h3>
+        <p>Your child is successfully enrolled in our institution</p>
+        <a class="btn-admission" href="MEDIA/DOCUMENTS/pre-primary 2024 fee structure.pdf">DOWNLOAD PRE-PRIMARY 2024 FEE STRUCTURE</a>
+        <a class="btn-admission" href="MEDIA/DOCUMENTS/GRADE 1 - 3 2024 fee structure.pdf">DOWNLOAD GRADE 1 - 3 2024 FEE STRUCTURE</a>
+        <a class="btn-admission" href="MEDIA/DOCUMENTS/GRADE 4 - 6 2024 fee structure.pdf">DOWNLOAD GRADE 4 - 6 2024 FEE STRUCTURE</a>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>

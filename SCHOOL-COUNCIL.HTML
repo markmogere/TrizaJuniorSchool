@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIZA JUNIOR SCHOOL - Education is Light</title>
+    <!-- Link to your main CSS file -->
+    <head>
+      <!-- ... other meta tags and stylesheets ... -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="HOMEPAGE.CSS">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container-school-council">
+        <h1>School Council</h1>
+
+        <!-- School Council Section -->
+        <div class="info-card-school-council school-council-section">
+            <div class="school-council-description">
+                <p>The Triza Junior School Council is composed of dedicated individuals who play a vital role in our school's leadership. They work collaboratively to make important decisions that impact our school community.</p>
+            </div>
+            <div class="school-council-members">
+                <!-- Member 1 -->
+                <div class="school-council-member">
+                    <img src="MEDIA/IMAGES/vice president.jpg" alt="School President">
+                   
+                    <h1 style="color: red;font-size: 20px;">Dr. Elizabeth Taro</h1>
+                    <h1 class="member-title-style"><span style="color: rgb(96, 47, 151); font-size: 16px;">Founder and C.E.O</span></h1>
+                    <p>
+                    
+                        Mrs. Taro, a devoted mother and visionary educator, leads as the School President with an unwavering commitment to nurturing a holistic learning environment. Her transformative leadership fosters collaboration among faculty, parents, and students, elevating the institution's ethos toward academic excellence and personalized student development.
+                    </p>
+                </div>
+                <!-- Member 2 -->
+                <div class="school-council-member">
+                    <img src="MEDIA/IMAGES/CEO.jpg" alt="Vice President">
+                    <h1 style="color: red;font-size: 20px;">MD Wacharo</h1>
+                    <h1 class="member-title-style"><span style="color: rgb(96,47,151); font-size: 16px;">Director</span>(<span style="font-weight: lighter; color: rgb(23, 148, 71); font-size: 16px;">Finance</span>)</h1>
+                    <p>
+                      As the Finance Director, MD Dorothy  demonstrates unparalleled financial expertise and strategic acumen. Her meticulous planning and governance establish a robust fiscal framework, ensuring the institution's financial health and sustainability, while her vision for transparency and accountability fortifies its fiscal integrity.
+                    </p>
+                </div>
+                <!-- Member 3 -->
+                <div class="school-council-member">
+                    <img src="MEDIA/IMAGES/SCHOOL SECRETARY.jpg" alt="Secretary">
+                    <h1 style="color: red;font-size: 20px;">MD Christine</h1>
+                    <h1 class="member-title-style"><span style="color: rgb(96,47,151); font-size: 16px;">Director</span>(<span style="font-weight: lighter; color: rgb(23, 148, 71); font-size: 16px;">Academics and ICT</span>)</h1>                    
+                    
+                    <p></p>
+                    <p>
+                    MD Christine, as the Director for Academics and ICT, pioneers a technological revolution in education. Her vision seamlessly merges academic excellence with cutting-edge technology, ushering in an era where ICT integration transforms learning experiences and propels the institution towards innovative educational paradigms.
+                    </p>
+                </div>
+              
+                
+               
+
+                <!-- Add more members here -->
+            </div>
+        </div>
+
+        <!-- Additional Information or Sections Here -->
+    </div>
+    <div id="footer"></div>
+
+  <!-- JavaScript code to dynamically load the header and footer -->
+  <script>
+    // Function to fetch and load the header and footer content
+    function loadHeaderAndFooter() {
+      const headerDiv = document.getElementById('header');
+      const footerDiv = document.getElementById('footer');
+  
+      // Fetch the header content
+      fetch('HEADER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          headerDiv.innerHTML = data;
+        });
+  
+      // Fetch the footer content
+      fetch('FOOTER.HTML')
+        .then(response => response.text())
+        .then(data => {
+          footerDiv.innerHTML = data;
+        });
+    }
+  
+    // Call the function to load the header and footer when the page is ready
+    document.addEventListener('DOMContentLoaded', loadHeaderAndFooter);
+  </script>
+  
+</body>
+</html>
